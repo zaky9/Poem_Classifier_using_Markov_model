@@ -1,12 +1,8 @@
 # Poem-Classifier
 
-This repo is part of my notes/exercise from the Udemy course : [Natural Language Processing in Python (V2)](https://www.udemy.com/course/natural-language-processing-in-python/). We will take a look ar
+This repo is part of my notes/exercise from the Udemy course : [Natural Language Processing in Python (V2)](https://www.udemy.com/course/natural-language-processing-in-python/). In this repo, We take a look at how we can classify text based on which authors. A model that take input a string of text and output a prediction about which authors it belong to. Text classification is supervised learning, but Markov models are unsupervised (training data is sequence of text and no labels). Thus, we must apply Baye's rules (using Bayes Classifier) $$p(y|x) = \frac{p(x|y)p(y)}{p(x)}$$
 
-- is a model that will take as input a string of text and output a prediction about the category it belongs to.
-- eg: classifing a poem (by robert or edgaar?), classify email (spam or not spam), movie review (positive or negative review)\
-- text classification is supervised learning, but Markov models are unsupervised (training data is sequence of text and no labels). Thus, we must apply Baye's rules (using Bayes Classifier) $$p(y|x) = \frac{p(x|y)p(y)}{p(x)}$$
-
-- Workflow for text classifier: 
+- **Workflow for text classifier**: 
     1. train a seperate Markov model for each class (sequence of text). Where each model give us $p(x|class=k) for all k (class)
     2. Bayes rule is used to create the decision rule:
 $$K^\* = arg\underset{k}{max}p(class = k|x)$$ Where k = class, x= input
