@@ -1,4 +1,4 @@
-# Poem classifier using Markov Model
+# Poem classifier using Markov model
 
 This repo is part of my notes/exercise from the Udemy course : [Natural Language Processing in Python (V2)](https://www.udemy.com/course/natural-language-processing-in-python/). In this repo, We take a look at how we can classify text based on which authors. A model that take input a string of text and output a prediction about which authors it belong to. Text classification is supervised learning, but Markov models are unsupervised (training data is sequence of text and no labels). Thus, we must apply Baye's rules (using Bayes Classifier) $$p(y|x) = \frac{p(x|y)p(y)}{p(x)}$$
 
