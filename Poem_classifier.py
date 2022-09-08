@@ -5,6 +5,8 @@ import string
 from sklearn.model_selection import train_test_split
 
 # Load the data
+# !wget -nc https://raw.githubusercontent.com/lazyprogrammer/machine_learning_examples/master/hmm_class/edgar_allan_poe.txt
+# !wget -nc https://raw.githubusercontent.com/lazyprogrammer/machine_learning_examples/master/hmm_class/robert_frost.txt
 poem_dir = 'C:/Users/ZAKY-PC/Jupyter_proj/datasets/poems'
 edgar_data = poem_dir + '/edgar_allan_poe.txt'
 robert_data = poem_dir + '/robert_frost.txt'
@@ -71,8 +73,6 @@ A1 = np.ones((V, V))
 pi1 = np.ones(V)
 
 # Populates the A and pi with the appropriate counts from the train set
-
-
 def compute_counts(text_as_int, A, pi):  # text for specific class, A and pi
     for tokens in text_as_int:
         last_idx = None  # help to keep track currrent populating A or pi
@@ -187,8 +187,6 @@ Ptest = clf.predict(test_text_int)
 print(f"Test acc: {np.mean(Ptest == y_test)}")
 
 # Evaluate the score using confusion matric and f1score
-
-
 def evaluate_cm_f1(y, pred):
     from sklearn.metrics import confusion_matrix, f1_score
     cm = confusion_matrix(y, pred)
